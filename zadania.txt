@@ -1,0 +1,21 @@
+Mikolaj:
+- Las
+- i wsm wszystkie tekstury
+
+Wojciech:
+- generowanie hotspotow
+- ui z satelita pokazujace hotspoty
+- pasek dopaminy i jej regeneracja
+- saving system
+- poczatkowa cutscenka
+- lore noty
+
+Grzybek:
+- menu
+- lore noty
+- straszaki i efekty dopaminy
+- sound effecty(wincej opisane w features.txt)
+- reelsy(wincej napisane w features.txt)
+
+Ignacy:
+- LARP

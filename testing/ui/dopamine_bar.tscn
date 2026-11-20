@@ -4,7 +4,7 @@
 
 [node name="DopamineBar" type="Node2D" unique_id=1870208906]
 
-[node name="DopamineBar" parent="." unique_id=1759574927 instance=ExtResource("1_7lav4")]
+[node name="bar" parent="." unique_id=1759574927 instance=ExtResource("1_7lav4")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0

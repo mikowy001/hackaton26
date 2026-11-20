@@ -1,11 +1,25 @@
 extends Node
 
+@onready var theBar = $TextureProgressBarl;
 
-# Called when the node enters the scene tree for the first time.
+var dopamine = 100.0;
+var pause = false;
+var drain_rate = 100;
+
+func set_dopamine(value: float):
+	theBar.set_value(dopamine);
+
+func drain_dopamine(value: float):
+	set_dopamine(dopamine - value);
+
+func pause_dopamine():
+	pause = true;
+
+func resume_dopamine():
+	pause = false;
+
 func _ready() -> void:
-	pass # Replace with function body.
+	theBar.set_value(100);
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if(pause): drain_dopamine(drain_rate * delta);

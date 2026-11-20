@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dqxtbn55lnvxq"]
+
+[ext_resource type="Script" uid="uid://dgif72axevr4u" path="res://scripts/core/saving.gd" id="1_t56yb"]
+
+[node name="Node2D" type="Node2D" unique_id=1907864598]
+
+[node name="Button" type="Button" parent="." unique_id=3610461]
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 28.0
+text = "Save"
+script = ExtResource("1_t56yb")
+
+[node name="Button2" type="Button" parent="." unique_id=2023919139]
+offset_left = 100.0
+offset_top = 21.0
+offset_right = 151.0
+offset_bottom = 52.0
+text = "Load"
+script = ExtResource("1_t56yb")
+
+[connection signal="pressed" from="Button" to="Button" method="save" binds= [15]]
+[connection signal="pressed" from="Button2" to="Button" method="load"]

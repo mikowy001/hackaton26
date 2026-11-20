@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqxtbn55lnvxq"]
 
-[ext_resource type="Script" uid="uid://dgif72axevr4u" path="res://saving.gd" id="1_t56yb"]
+[ext_resource type="Script" uid="uid://dgif72axevr4u" path="res://scripts/core/saving.gd" id="1_t56yb"]
 
 [node name="Node2D" type="Node2D" unique_id=1907864598]
 

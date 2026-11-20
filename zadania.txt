@@ -19,3 +19,4 @@ Grzybek:
 
 Ignacy:
 - LARP
+- gracz i basic movement

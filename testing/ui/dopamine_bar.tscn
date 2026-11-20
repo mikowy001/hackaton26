@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dpwnccxos8keh"]
+
+[ext_resource type="PackedScene" uid="uid://ovts6dnrx0w5" path="res://scenes/ui/dopamine_bar.tscn" id="1_7lav4"]
+
+[node name="DopamineBar" type="Node2D" unique_id=1870208906]
+
+[node name="bar" parent="." unique_id=1759574927 instance=ExtResource("1_7lav4")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1

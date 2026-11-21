@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bds6thy4xl16c" path="res://world.gd" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://ch86xgemoeg1j" path="res://assets/world_sprites.png" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://weule5axyb1" path="res://scenes/Player/Player.tscn" id="3_tlwt5"]
+[ext_resource type="Texture2D" uid="uid://cf0ovo44ss3te" path="res://assets/tree-variations.png" id="4_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://d0i4i6bl1mf3b" path="res://scenes/mechanics/hotspot.tscn" id="4_aqk2v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlwt5"]
@@ -62,10 +63,51 @@ texture_region_size = Vector2i(32, 32)
 2:2/0 = 0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_036b0"]
+texture = ExtResource("4_aqk2v")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+6:0/size_in_atlas = Vector2i(2, 2)
+6:0/0 = 0
+8:0/size_in_atlas = Vector2i(2, 2)
+8:0/0 = 0
+10:0/size_in_atlas = Vector2i(2, 2)
+10:0/0 = 0
+12:0/size_in_atlas = Vector2i(2, 2)
+12:0/0 = 0
+14:0/size_in_atlas = Vector2i(2, 2)
+14:0/0 = 0
+0:2/size_in_atlas = Vector2i(2, 3)
+0:2/0 = 0
+2:2/size_in_atlas = Vector2i(2, 3)
+2:2/0 = 0
+4:2/size_in_atlas = Vector2i(2, 3)
+4:2/0 = 0
+6:2/size_in_atlas = Vector2i(2, 3)
+6:2/0 = 0
+0:5/size_in_atlas = Vector2i(4, 4)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(17.524689, 53.689285, -13.382492, 54.326546, -13.382492, 20.551682, 14.338379, 22.144836)
+4:5/size_in_atlas = Vector2i(4, 4)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(17.524689, 53.689285, -13.382492, 54.326546, -13.382492, 20.551682, 14.338379, 22.144836)
+8:5/size_in_atlas = Vector2i(4, 4)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(17.524689, 53.689285, -13.382492, 54.326546, -13.382492, 20.551682, 14.338379, 22.144836)
+12:5/size_in_atlas = Vector2i(4, 4)
+12:5/0 = 0
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(17.524689, 53.689285, -13.382492, 54.326546, -13.382492, 20.551682, 14.338379, 22.144836)
+
 [sub_resource type="TileSet" id="TileSet_63hht"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_aqk2v")
+sources/1 = SubResource("TileSetAtlasSource_036b0")
 
 [node name="World" type="Node2D" unique_id=1933542707]
 script = ExtResource("1_fj7yv")

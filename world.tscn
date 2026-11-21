@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bds6thy4xl16c" path="res://world.gd" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://b2barnm8ginif" path="res://assets/world/worldtiles.png" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://weule5axyb1" path="res://scenes/Player/Player.tscn" id="3_tlwt5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fj7yv"]
 texture = ExtResource("2_fj7yv")

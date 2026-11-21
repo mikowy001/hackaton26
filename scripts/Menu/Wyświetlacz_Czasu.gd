@@ -12,8 +12,8 @@ func load() -> String:
 func _on_label_2_ready() -> void:
 	if  FileAccess.file_exists(filePath) == false:
 		get_parent().text = "Czas: 0:00";
-		return 
-	var temp = load(filePath);
-	var czas = temp.to_int();
-	get_parent().text = "Czas: " + (czas - czas%60)/60 + ":" + czas%60;
+	else:
+		var temp = load(filePath);
+		var czas = temp.to_int();
+		get_parent().text = "Czas: " + (czas - czas%60)/60 + ":" + czas%60;
 	

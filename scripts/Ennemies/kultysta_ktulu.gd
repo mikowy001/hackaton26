@@ -17,12 +17,14 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x = position.x - player.get_player_pos().x * delta*speed;
-	position.y = position.y - player.get_player_pos().y * delta*speed;
+	position.x -= ((position.x - player.get_player_pos().x)/abs(position.x - player.get_player_pos().x))*speed*delta;
+	position.y -= ((position.y - player.get_player_pos().y)/abs(position.y - player.get_player_pos().y))*speed*delta;
+	print_debug("test życia ktulu");
+	print_debug(position);
+	print_debug(player.get_player_pos());
 
 
-func _on_area_2d_area_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "Player"):
 		dopamine.dopamine -= 10;
 		queue_free();
-		

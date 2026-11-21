@@ -6,3 +6,5 @@ static var map_width: int = 200;
 static var map_height: int = 200;
 
 static var tile_size = 32;
+
+static var current_score: float = 0.0;

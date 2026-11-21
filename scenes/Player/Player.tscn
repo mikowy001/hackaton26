@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bn5qxax6tyjr3" path="res://assets/ss4.jpg" id="10_5gcuk"]
 [ext_resource type="AudioStream" uid="uid://b5rbudavi7ssh" path="res://high_dopamine.mp3" id="10_high"]
 [ext_resource type="AudioStream" uid="uid://bu631re7veir2" path="res://low_dopamine.mp3" id="10_low"]
+[ext_resource type="Theme" uid="uid://bnan0rflvcshl" path="res://Huberto's Assets/Menu.tres" id="11_lbts4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h00vy"]
 atlas = ExtResource("1_h00vy")
@@ -224,6 +225,21 @@ func _process(delta: float) -> void:
 		hide();
 "
 
+[sub_resource type="GDScript" id="GDScript_hsqoy"]
+resource_name = "buildinlabel"
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	text = \"Time: %d:%02d\" % [int(Globals.current_score / 60.0), int(fmod(Globals.current_score, 60.0))];
+"
+
 [node name="Player" type="CharacterBody2D" unique_id=2074806864]
 script = ExtResource("1_ved6o")
 
@@ -274,6 +290,16 @@ scale = Vector2(0.05856485, 0.040427923)
 sprite_frames = SubResource("SpriteFrames_xgwux")
 speed_scale = 4.0
 script = SubResource("GDScript_8djf2")
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=1929180863]
+z_index = 2
+offset_left = -175.0
+offset_top = -116.0
+offset_right = -110.0
+offset_bottom = -100.0
+theme = ExtResource("11_lbts4")
+text = "Time: 00:00"
+script = SubResource("GDScript_hsqoy")
 
 [node name="ryba" type="TextureRect" parent="." unique_id=19497773]
 offset_left = -28.0

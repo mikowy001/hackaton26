@@ -1,19 +1,10 @@
 extends Node;
 
-const filePath = "user://save.dat";# przy zmanie zobacz zmień też res://scripts/core/saving.gd
+const Saving = preload("res://scripts/core/saving.gd")
 
-func load() -> String:
-	var file = FileAccess.open(filePath, FileAccess.READ);
-	var data: String = file.get_as_text();
-	print_debug("Loaded the save, got ", data, " points");
-	
-	return data;
+@onready var saving = Saving.new()
 
 func _on_label_2_ready() -> void:
-	if  FileAccess.open(filePath, FileAccess.READ) == null:
-		get_parent().text = "Czas: 0:00";
-	else:
-		var temp = load(filePath);
-		var czas = temp.to_int();
-		get_parent().text = "Czas: " + (czas - czas%60)/60 + ":" + czas%60;
-	
+		var czas = saving.load_data()
+		var czasint = int(str(czas));
+		get_parent().text = "Time: %d:%02d" % [czasint / 60, czasint % 60];

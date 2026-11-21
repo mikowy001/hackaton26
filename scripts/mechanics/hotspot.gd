@@ -6,7 +6,7 @@ extends Area2D
 var cirColor = Color(0.0, 0.565, 0.694, 0.5);
 var intensity = 1.0;
 
-var reallness = 0.1;
+var reallness = 0.2;
 
 var isThisPlayerInside = false;
 

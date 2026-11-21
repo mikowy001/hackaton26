@@ -1,4 +1,3 @@
-
 extends CharacterBody2D
 
 @export var speed: float = 10000.0
@@ -12,11 +11,11 @@ func _physics_process(delta):
 		"move_left",
 		"move_right",
 		"move_up",
-        "move_down"
+		"move_down"
 	)
-
+	
 	velocity = direction * speed * delta
-
+	
 	if direction != Vector2.ZERO:
 		if abs(direction.x) > abs(direction.y):
 			if direction.x > 0:
@@ -30,7 +29,7 @@ func _physics_process(delta):
 				last_direction = "walkUp"
 		
 		print_debug("New player pos is ", position.x, " ", position.y);
-
+		
 		animated_sprite.play(last_direction)
 	else:
 		animated_sprite.stop()

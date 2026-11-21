@@ -14,7 +14,6 @@ func _on_label_2_ready() -> void:
 		get_parent().text = "Czas: 0:00";
 	else:
 		var temp = load(filePath);
-		temp = "0"+temp;
 		var czas = temp.to_int();
 		get_parent().text = "Czas: " + (czas - czas%60)/60 + ":" + czas%60;
 	

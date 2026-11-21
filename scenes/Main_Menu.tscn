@@ -3,8 +3,8 @@
 [ext_resource type="Theme" uid="uid://bnan0rflvcshl" path="res://Huberto's Assets/Menu.tres" id="1_257up"]
 [ext_resource type="Texture2D" uid="uid://cfinwu4taopks" path="res://Huberto's Assets/earth.png" id="2_gtid3"]
 [ext_resource type="Texture2D" uid="uid://c5nyk2uifly7w" path="res://Huberto's Assets/menuHandWithPhone.png" id="3_257up"]
-[ext_resource type="Script" uid="uid://bjyifs4ffkjki" path="res://Play.gd" id="4_257up"]
-[ext_resource type="Script" uid="uid://by84mfs2s0023" path="res://Quit.gd" id="4_dnfjo"]
+[ext_resource type="Script" uid="uid://bjyifs4ffkjki" path="res://scripts/Menu/Play.gd" id="4_257up"]
+[ext_resource type="Script" uid="uid://by84mfs2s0023" path="res://scripts/Menu/Quit.gd" id="4_dnfjo"]
 
 [sub_resource type="Animation" id="Animation_yv6n1"]
 length = 0.001
@@ -137,6 +137,13 @@ autoplay = &"ZIEMIA"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1853070166]
 anchor_mode = 0
 zoom = Vector2(0.5, 0.5)
+
+[node name="Label2" type="Label" parent="." unique_id=1921516014]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_257up")
+theme_override_font_sizes/font_size = 32
+text = "Czas: 00:00"
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/Button" to="TextureRect/VBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Button3" to="TextureRect/VBoxContainer/Button3" method="_on_pressed"]

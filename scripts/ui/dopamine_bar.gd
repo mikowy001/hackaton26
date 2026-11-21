@@ -3,10 +3,11 @@ extends Node
 @onready var theBar = $TextureProgressBar
 
 
-
+var czasmiędzywyznawcaktulu= 0;
 var czasmiędzyzadrzewem= 0;
 @export var dopamine = 100.0;
 var zadrzewem = load("res://scenes/Ennemies/ZaDrzewem.tscn");
+var kultystaktulu = load("res://scenes/Ennemies/KultystaKtulu.tscn");
 
 var paused = false;
 var drain_rate = 2;
@@ -56,5 +57,13 @@ func _process(delta: float) -> void:
 	else:
 		czasmiędzyzadrzewem += delta;
 	
-	
+	if czasmiędzywyznawcaktulu > 10:
+		if dopamine >50:
+			pass
+		else:
+			var kk = kultystaktulu.instantiate();
+			get_tree().current_scene.add_child(kk);
+			czasmiędzywyznawcaktulu = 0;
+	else:
+		czasmiędzywyznawcaktulu += delta;
 	# TODO: Wysyłanie do death screena jak będzie

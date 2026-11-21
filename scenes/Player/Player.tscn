@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cvu1dv7a8rqdq" path="res://scripts/player/player.gd" id="1_ved6o"]
 [ext_resource type="Shader" uid="uid://7ujk612gd6es" path="res://scenes/Player/dopamine.gdshader" id="3_bvqhm"]
 [ext_resource type="PackedScene" uid="uid://ovts6dnrx0w5" path="res://scenes/ui/dopamine_bar.tscn" id="3_ved6o"]
+[ext_resource type="PackedScene" uid="uid://bu1amv7lvxoiy" path="res://scenes/ui/compass.tscn" id="4_xcisb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h00vy"]
 atlas = ExtResource("1_h00vy")
@@ -200,6 +201,13 @@ offset_top = 85.0
 offset_right = 153.0
 offset_bottom = 85.0
 scale = Vector2(0.5, 0.5)
+
+[node name="Compass" parent="Camera2D" unique_id=40836165 instance=ExtResource("4_xcisb")]
+offset_left = 111.00001
+offset_top = -84.0
+offset_right = 111.00001
+offset_bottom = -84.0
+scale = Vector2(0.3, 0.3)
 
 [node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=575651364]
 

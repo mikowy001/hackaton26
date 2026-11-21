@@ -21,7 +21,16 @@ func debug(info: String):
 	if(DEBUG):
 		print(info)
 
+const Saving = preload("res://scripts/core/saving.gd")
+
+@onready var saving = Saving.new()
+
+func _exit_tree() -> void:
+	saving.save_data(Globals.current_score);
+	Globals.current_score = 0;
+
 func _process(delta: float) -> void:
+	Globals.current_score += 1 * delta;
 	if Input.is_action_pressed("ui_up"):
 		noise_scale += 0.1
 		print(noise_scale)

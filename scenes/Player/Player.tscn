@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://r4t4ru48f34s" path="res://assets/debilka.png" id="1_h00vy"]
 [ext_resource type="Script" uid="uid://8t7544e0bpuq" path="res://scenes/Player/movement.gd" id="1_ky53y"]
 [ext_resource type="Shader" uid="uid://7ujk612gd6es" path="res://scenes/Player/dopamine.gdshader" id="3_bvqhm"]
+[ext_resource type="PackedScene" uid="uid://ovts6dnrx0w5" path="res://scenes/ui/dopamine_bar.tscn" id="3_ved6o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h00vy"]
 atlas = ExtResource("1_h00vy")
@@ -192,6 +193,13 @@ frame_progress = 0.05446678
 shape = SubResource("CapsuleShape2D_ky53y")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=73176397]
+
+[node name="DopamineBar" parent="Camera2D" unique_id=1759574927 instance=ExtResource("3_ved6o")]
+offset_left = 153.0
+offset_top = 85.0
+offset_right = 153.0
+offset_bottom = 85.0
+scale = Vector2(0.5, 0.5)
 
 [node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=575651364]
 

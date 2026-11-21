@@ -10,9 +10,6 @@ var reallness = 0.1;
 
 var isThisPlayerInside = false;
 
-func reroll():
-	intensity = 1.0;
-
 func _on_body_entered(body: Node2D):
 	if(body.name == "Player"):
 		isThisPlayerInside = true;
@@ -24,7 +21,9 @@ func _on_body_exited(body: Node2D):
 		print_debug("Player exited this very very interesting spot :(");
 
 func _ready() -> void:
-	pass
+	position.x = (Globals.map_width * Globals.tile_size) * randf();
+	position.y = (Globals.map_height * Globals.tile_size) * randf();
+	print_debug("Starting hot pos is ", position.x, " ", position.y);
 
 func _process(delta: float) -> void:
 	if(isThisPlayerInside):
@@ -32,6 +31,12 @@ func _process(delta: float) -> void:
 		queue_redraw();
 		if(Input.is_action_just_pressed("spacja", true) && dopamineBar != null):
 			dopamineBar.add_dopamine(3);
+	
+	if(intensity <= 0):
+		intensity = 1.0;
+		position.x = (Globals.map_width * Globals.tile_size) * randf();
+		position.y = (Globals.map_height * Globals.tile_size) * randf();
+		print_debug("New hot pos is ", position.x, " ", position.y);
 
 func _draw() -> void:
 	# Color(cirColor, cirColor.a * intensity) jest kurka rurka wow, co to jest godot :0

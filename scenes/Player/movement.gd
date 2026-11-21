@@ -28,6 +28,8 @@ func _physics_process(delta):
 				last_direction = "walkDown"
 			else:
 				last_direction = "walkUp"
+		
+		print_debug("New player pos is ", position.x, " ", position.y);
 
 		animated_sprite.play(last_direction)
 	else:

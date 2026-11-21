@@ -7,7 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://rm8gs2x2vxm" path="res://assets/aPHONEd.png" id="4_fxc31"]
 [ext_resource type="PackedScene" uid="uid://bu1amv7lvxoiy" path="res://scenes/ui/compass.tscn" id="4_xcisb"]
 [ext_resource type="Texture2D" uid="uid://3ec1yvy4ynk4" path="res://assets/ryba.png" id="6_socpp"]
+[ext_resource type="Texture2D" uid="uid://1vv6vgrcibx" path="res://assets/ss1.jpg" id="7_8djf2"]
+[ext_resource type="Texture2D" uid="uid://bc2on1v1r5fvi" path="res://assets/ss2.jpg" id="8_lbts4"]
+[ext_resource type="Texture2D" uid="uid://db5xgcrlmerem" path="res://assets/ss3.jpg" id="9_dqefj"]
 [ext_resource type="AudioStream" uid="uid://bg4d1lkqpnyeh" path="res://assets/sfx_throw.wav" id="9_mmokv"]
+[ext_resource type="Texture2D" uid="uid://bn5qxax6tyjr3" path="res://assets/ss4.jpg" id="10_5gcuk"]
 [ext_resource type="AudioStream" uid="uid://b5rbudavi7ssh" path="res://high_dopamine.mp3" id="10_high"]
 [ext_resource type="AudioStream" uid="uid://bu631re7veir2" path="res://low_dopamine.mp3" id="10_low"]
 
@@ -181,6 +185,26 @@ animations = [{
 radius = 5.0
 height = 16.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_xgwux"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8djf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lbts4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dqefj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5gcuk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D" unique_id=2074806864]
 script = ExtResource("1_ved6o")
 
@@ -223,6 +247,13 @@ offset_top = 28.0
 offset_right = 46.0
 offset_bottom = 28.0
 scale = Vector2(0.23, 0.23)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Camera2D" unique_id=1631297898]
+z_index = 2
+position = Vector2(144, -6)
+scale = Vector2(0.06018517, 0.013963965)
+sprite_frames = SubResource("SpriteFrames_xgwux")
+speed_scale = 4.0
 
 [node name="ryba" type="TextureRect" parent="." unique_id=19497773]
 offset_left = -28.0

@@ -21,16 +21,15 @@ func debug(info: String):
 		print(info)
 
 func _process(delta: float) -> void:
-	if(debug):
-		if Input.is_action_pressed("ui_up"):
-			noise_scale += 0.1
-			print(noise_scale)
-			generate_map()
-	
-		if Input.is_action_pressed("ui_down"):
-			noise_scale -= 0.1
-			print(noise_scale)
-			generate_map()
+	if Input.is_action_pressed("ui_up"):
+		noise_scale += 0.1
+		print(noise_scale)
+		generate_map()
+
+	if Input.is_action_pressed("ui_down"):
+		noise_scale -= 0.1
+		print(noise_scale)
+		generate_map()
 
 
 func generate_map():
@@ -53,14 +52,13 @@ func generate_map():
 				)
 			elif (random_for_tree == 1):
 				var arrayX = [8, 10, 12, 14, 0, 2, 4, 6, 0, 4, 8, 12]
-				var arrayY = [0, 0, 0, 0, 2, 2, 2, 2, 5, 5, 5, 5]
+				var arrayY = [0, 0, 0, 0, 2, 2, 2, 2, 4, 4, 4, 4]
 				var ranarr = randi_range(0, 11)
 				tree_layer.set_cell(
 					Vector2i(x, y),
 					1,
 					Vector2i(arrayX[ranarr], arrayY[ranarr])
 				)
-				
 		
 			var noise_value = noise.get_noise_2d(x, y) * noise_scale
 		

@@ -20,6 +20,7 @@ func get_dopamine():
 func set_dopamine(value: float):
 	if(value > theBar.get_max()): theBar.set_value(theBar.get_max()); return;
 	elif(value < theBar.get_min()): theBar.set_value(theBar.get_min()); return;
+	print_debug("Dop: ", value);
 	theBar.set_value(value);
 	dopamine = value;
 
@@ -51,9 +52,12 @@ func _process(delta: float) -> void:
 	if(!paused): drain_dopamine(drain_rate * delta);
 	
 	if czasmiędzyzadrzewem > 3:
-		var zd = zadrzewem.instantiate();
-		get_tree().current_scene.add_child(zd);
-		czasmiędzyzadrzewem = 0;
+		if dopamine >60:
+			pass
+		else:
+			var zd = zadrzewem.instantiate();
+			get_tree().current_scene.add_child(zd);
+			czasmiędzyzadrzewem = 0;
 	else:
 		czasmiędzyzadrzewem += delta;
 	
@@ -66,4 +70,9 @@ func _process(delta: float) -> void:
 			czasmiędzywyznawcaktulu = 0;
 	else:
 		czasmiędzywyznawcaktulu += delta;
-	# TODO: Wysyłanie do death screena jak będzie
+	
+	if dopamine <= 0.1:
+		
+		#oooooo tuuuuuuuuuuuu
+		
+		get_tree().change_scene_to_file("res://scenes/Ded.tscn");

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dw74mjx8oqbr4"]
+
+[ext_resource type="Script" uid="uid://x0eq4i83aw36" path="res://ded.gd" id="1_rapv2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_swshk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t68kp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_doi7v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnd53"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pf0au"]
+
+[node name="Control" type="Control" unique_id=729784242]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1808206763]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="." unique_id=1197547105]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 0)
+theme_override_colors/font_focus_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/font_pressed_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/font_hover_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/font_hover_pressed_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_colors/font_outline_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/icon_normal_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/icon_focus_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/icon_pressed_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/icon_hover_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_swshk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t68kp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_doi7v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jnd53")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pf0au")
+script = ExtResource("1_rapv2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,6 +1,6 @@
 extends CanvasModulate
 
-const MIN_BRIGHTNESS := 0.08   # "near 0" instead of pitch black
+const MIN_BRIGHTNESS := 0.2   # "near 0" instead of pitch black
 const MAX_DOPAMINE := 100.0    # matches the bar's default max
 const MIN_VOLUME := 0.0001     # ~ -80 dB, avoids linear_to_db(0)
 

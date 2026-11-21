@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://weule5axyb1"]
 
 [ext_resource type="Texture2D" uid="uid://r4t4ru48f34s" path="res://assets/debilka.png" id="1_h00vy"]
-[ext_resource type="Script" uid="uid://8t7544e0bpuq" path="res://scenes/Player/movement.gd" id="1_ky53y"]
+[ext_resource type="Script" path="res://scenes/Player/movement.gd" id="1_ky53y"]
 [ext_resource type="Script" uid="uid://damtci6x00tvv" path="res://scenes/Player/sciemnianie.gd" id="2_ved6o"]
 [ext_resource type="PackedScene" uid="uid://ovts6dnrx0w5" path="res://scenes/ui/dopamine_bar.tscn" id="3_ved6o"]
 
@@ -176,7 +176,7 @@ radius = 5.0
 height = 16.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2074806864]
-script = ExtResource("1_ved6o")
+script = ExtResource("1_ky53y")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1403899919]
 script = ExtResource("2_ved6o")

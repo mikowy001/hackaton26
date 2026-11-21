@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://r4t4ru48f34s" path="res://assets/debilka.png" id="1_h00vy"]
 [ext_resource type="Script" uid="uid://8t7544e0bpuq" path="res://scenes/Player/movement.gd" id="1_ky53y"]
+[ext_resource type="Shader" uid="uid://7ujk612gd6es" path="res://scenes/Player/dopamine.gdshader" id="3_bvqhm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h00vy"]
 atlas = ExtResource("1_h00vy")
@@ -173,6 +174,11 @@ animations = [{
 radius = 5.0
 height = 16.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ky53y"]
+shader = ExtResource("3_bvqhm")
+shader_parameter/nightness = 0.0
+shader_parameter/night_tint = Color(0.08, 0.12, 0.28, 1)
+
 [node name="Player" type="CharacterBody2D" unique_id=2074806864]
 script = ExtResource("1_ky53y")
 
@@ -184,3 +190,15 @@ frame_progress = 0.05446678
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1951862291]
 shape = SubResource("CapsuleShape2D_ky53y")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=73176397]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=575651364]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasGroup" unique_id=327469355]
+material = SubResource("ShaderMaterial_ky53y")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

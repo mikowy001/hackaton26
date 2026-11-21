@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2barnm8ginif"
-path="res://.godot/imported/worldtiles.png-5ed3dccafc25b75bcbfc33d1d4006617.ctex"
+uid="uid://di6sww0obfkhw"
+path="res://.godot/imported/menuHandWithPhone.png-c6bd5bd438bc97d9b20646d35d14e4e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world/worldtiles.png"
-dest_files=["res://.godot/imported/worldtiles.png-5ed3dccafc25b75bcbfc33d1d4006617.ctex"]
+source_file="res://assets/menuHandWithPhone.png"
+dest_files=["res://.godot/imported/menuHandWithPhone.png-c6bd5bd438bc97d9b20646d35d14e4e1.ctex"]
 
 [params]
 

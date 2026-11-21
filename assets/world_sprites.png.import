@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2barnm8ginif"
-path="res://.godot/imported/worldtiles.png-5ed3dccafc25b75bcbfc33d1d4006617.ctex"
+uid="uid://ch86xgemoeg1j"
+path="res://.godot/imported/world_sprites.png-76b94627aa75f29719c9c04bcce932e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world/worldtiles.png"
-dest_files=["res://.godot/imported/worldtiles.png-5ed3dccafc25b75bcbfc33d1d4006617.ctex"]
+source_file="res://assets/world_sprites.png"
+dest_files=["res://.godot/imported/world_sprites.png-76b94627aa75f29719c9c04bcce932e2.ctex"]
 
 [params]
 

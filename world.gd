@@ -26,7 +26,7 @@ const Saving = preload("res://scripts/core/saving.gd")
 @onready var saving = Saving.new()
 
 func _exit_tree() -> void:
-	saving.save_data(Globals.current_score);
+	if(int(saving.load_data()) < Globals.current_score): saving.save_data(Globals.current_score);
 	Globals.current_score = 0;
 
 func _process(delta: float) -> void:

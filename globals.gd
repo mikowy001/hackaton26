@@ -7,4 +7,4 @@ static var map_height: int = 100;
 
 static var tile_size = 32;
 
-static var current_score = 0;
+static var current_score: float = 0.0;

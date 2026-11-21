@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c5nyk2uifly7w" path="res://Huberto's Assets/menuHandWithPhone.png" id="3_257up"]
 [ext_resource type="Script" uid="uid://bjyifs4ffkjki" path="res://scripts/Menu/Play.gd" id="4_257up"]
 [ext_resource type="Script" uid="uid://by84mfs2s0023" path="res://scripts/Menu/Quit.gd" id="4_dnfjo"]
-[ext_resource type="Script" uid="uid://b86f2jsm5eb57" path="res://scenes/Wyświetlacz_Czasu.gd" id="7_d3eho"]
+[ext_resource type="Script" uid="uid://b86f2jsm5eb57" path="res://scripts/Menu/Wyświetlacz_Czasu.gd" id="7_d3eho"]
 
 [sub_resource type="Animation" id="Animation_yv6n1"]
 length = 10.0

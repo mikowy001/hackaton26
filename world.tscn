@@ -133,4 +133,4 @@ tile_set = SubResource("TileSet_63hht")
 
 [node name="Hotspot" parent="." unique_id=613247634 instance=ExtResource("4_aqk2v")]
 scale = Vector2(10, 10)
-dopamine_bar_path = NodePath("../Player/Camera2D/DopamineBar")
+dopamine_bar_path = NodePath("../Player/Camera2D/TextureRect/DopamineBar")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ya55vaq5abdm"]
+
+[ext_resource type="Script" uid="uid://cwmycpeyl1xjn" path="res://scripts/Ennemies/kultysta_ktulu.gd" id="1_j7pbn"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=535359370]
+script = ExtResource("1_j7pbn")

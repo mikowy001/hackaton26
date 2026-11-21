@@ -31,6 +31,7 @@ func _process(delta: float) -> void:
 		queue_redraw();
 		if(Input.is_action_just_pressed("spacja", true) && dopamineBar != null):
 			dopamineBar.add_dopamine(1);
+			
 	
 	if(intensity <= 0):
 		intensity = 1.0;

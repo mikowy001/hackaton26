@@ -3,6 +3,7 @@ extends Node2D
 @onready var grass_layer: TileMapLayer = $Ground
 @onready var tree_layer: TileMapLayer = $Ground/Trees
 
+
 @export var noise_scale: float = 1.25
 @export var seed_value: int = 2137
 
@@ -59,6 +60,7 @@ func generate_map():
 					1,
 					Vector2i(arrayX[ranarr], arrayY[ranarr])
 				)
+				
 		
 			var noise_value = noise.get_noise_2d(x, y) * noise_scale
 		

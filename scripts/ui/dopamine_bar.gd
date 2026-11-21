@@ -2,9 +2,16 @@ extends Node
 
 @onready var theBar = $TextureProgressBar
 
-var dopamine = 100.0;
+
+
+var czasmiędzyzadrzewem= 0;
+@export var dopamine = 100.0;
+var zadrzewem = load("res://scenes/Ennemies/ZaDrzewem.tscn");
+
 var paused = false;
 var drain_rate = 2;
+
+
 
 func get_dopamine():
 	return dopamine;
@@ -41,4 +48,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if(!paused): drain_dopamine(drain_rate * delta);
+	
+	if czasmiędzyzadrzewem > 3:
+		var zd = zadrzewem.instantiate();
+		get_tree().current_scene.add_child(zd);
+		czasmiędzyzadrzewem = 0;
+	else:
+		czasmiędzyzadrzewem += delta;
+	
+	
 	# TODO: Wysyłanie do death screena jak będzie

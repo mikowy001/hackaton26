@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dgxf0oyp0hy0u"]
+
+[ext_resource type="PackedScene" uid="uid://d0i4i6bl1mf3b" path="res://scenes/mechanics/hotspot.tscn" id="1_k548s"]
+[ext_resource type="Script" uid="uid://kmxifj187slo" path="res://testing/mechanics/character_body_2d.gd" id="2_n6r8l"]
+[ext_resource type="PackedScene" uid="uid://ovts6dnrx0w5" path="res://scenes/ui/dopamine_bar.tscn" id="3_0oia4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgwux"]
+size = Vector2(40, 39)
+
+[node name="Hotspot" type="Node2D" unique_id=1060248444]
+
+[node name="Hotspot" parent="." unique_id=613247634 instance=ExtResource("1_k548s")]
+position = Vector2(581, 388)
+scale = Vector2(10, 10)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=586832698]
+script = ExtResource("2_n6r8l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=974444164]
+position = Vector2(260, 328.5)
+shape = SubResource("RectangleShape2D_xgwux")
+
+[node name="ColorRect" type="ColorRect" parent="Player" unique_id=1458271553]
+offset_left = 240.0
+offset_top = 308.0
+offset_right = 280.0
+offset_bottom = 348.0
+
+[node name="DopamineBar" parent="." unique_id=1759574927 instance=ExtResource("3_0oia4")]
+offset_left = 867.0
+offset_top = 480.0
+offset_right = 867.0
+offset_bottom = 480.0

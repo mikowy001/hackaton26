@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs0ld4umkcv1x"
-path="res://.godot/imported/guzik.png-5d0dee257e62637b9b62a5ff328db4b7.ctex"
+uid="uid://cfinwu4taopks"
+path="res://.godot/imported/earth.png-14d26b958e1e3d4bfe589f5a37786719.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/guzik.png"
-dest_files=["res://.godot/imported/guzik.png-5d0dee257e62637b9b62a5ff328db4b7.ctex"]
+source_file="res://Huberto's Assets/earth.png"
+dest_files=["res://.godot/imported/earth.png-14d26b958e1e3d4bfe589f5a37786719.ctex"]
 
 [params]
 

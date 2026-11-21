@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5nyk2uifly7w"
-path="res://.godot/imported/menuHandWithPhone.png-a056b1468f9862fb439b8f82241da2c4.ctex"
+path="res://.godot/imported/menuHandWithPhone.png-1a73df7de464396699e704718019cd4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menuHandWithPhone.png"
-dest_files=["res://.godot/imported/menuHandWithPhone.png-a056b1468f9862fb439b8f82241da2c4.ctex"]
+source_file="res://Huberto's Assets/menuHandWithPhone.png"
+dest_files=["res://.godot/imported/menuHandWithPhone.png-1a73df7de464396699e704718019cd4c.ctex"]
 
 [params]
 

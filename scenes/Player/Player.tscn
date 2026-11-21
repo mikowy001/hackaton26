@@ -182,7 +182,7 @@ shader_parameter/nightness = 0.0
 shader_parameter/night_tint = Color(0.08, 0.12, 0.28, 1)
 
 [node name="Player" type="CharacterBody2D" unique_id=2074806864]
-script = ExtResource("1_ved6o")
+script = ExtResource("1_ky53y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1444178757]
 sprite_frames = SubResource("SpriteFrames_4galn")

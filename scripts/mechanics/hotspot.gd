@@ -8,7 +8,7 @@ var intensity = 1.0;
 
 var reallness = 0.2;
 
-var isThisPlayerInside = false;
+@export var isThisPlayerInside = false;
 
 func _on_body_entered(body: Node2D):
 	if(body.name == "Player"):

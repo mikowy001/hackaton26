@@ -3,24 +3,25 @@ extends CharacterBody2D
 @export var speed: float = 166.0
 
 @export var orbit_radius: float = 19.0
-@export var orbit_speed: float = 2.0  # radians per second
-@export var fish_facing_offset: float = PI  # sprite's snout points away from the player
+@export var orbit_speed: float = 2.0  
+@export var fish_facing_offset: float = PI  
 
 @export var boost_speed: float = 400.0
-@export var boost_decay: float = 6.0  # higher = shorter hop
+@export var boost_decay: float = 6.0  
 @export var boost_cooldown: float = 0.25
-@export var min_dash_dopamine: float = 25.0  # 1/4 of the 100-point bar
+@export var min_dash_dopamine: float = 25.0 
 @export var dash_dopamine_cost: float = 2.0
 
 @export var hotspot_path: NodePath = ^"../Hotspot"
 
+@onready var Sound_Dash = $DashAudioPlayer
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var ryba = $ryba
 @onready var hotspot = get_node_or_null(hotspot_path)
 @onready var dopamine_bar = get_node_or_null("Camera2D/TextureRect/DopamineBar")
 
 var last_direction = "walkDown"
-var orbit_angle: float = -3 * PI  # start on the left, where the fish was placed
+var orbit_angle: float = -3 * PI  
 var boost_velocity := Vector2.ZERO
 var boost_requested := false
 var boost_cooldown_left: float = 0.0
@@ -51,10 +52,10 @@ func _physics_process(delta: float) -> void:
 		var inside_hotspot: bool = hotspot != null and bool(hotspot.isThisPlayerInside)
 		var has_enough_dopamine: bool = dopamine_bar != null and float(dopamine_bar.get_dopamine()) >= min_dash_dopamine
 		if boost_cooldown_left <= 0.0 and not inside_hotspot and has_enough_dopamine:
-			# The sprite's snout is the opposite of the node's +X, so the dash
-			# uses the raw orbit angle: that is the radial "away from player" direction.
+			
 			boost_velocity = Vector2.RIGHT.rotated(orbit_angle) * boost_speed
 			boost_cooldown_left = boost_cooldown
+			Sound_Dash.play()
 			dopamine_bar.drain_dopamine(dash_dopamine_cost)
 
 	velocity += boost_velocity

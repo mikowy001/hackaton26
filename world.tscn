@@ -64,8 +64,41 @@ terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_fj7yv")
 sources/1 = SubResource("TileSetAtlasSource_tlwt5")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
+resource_name = "Trees"
+texture = ExtResource("2_fj7yv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4ibau"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_aqk2v")
+
 [node name="World" type="Node2D" unique_id=1933542707]
 script = ExtResource("1_fj7yv")
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=2132829169]
 tile_set = SubResource("TileSet_o21qa")
+
+[node name="Trees" type="TileMapLayer" parent="Ground" unique_id=1317921305]
+tile_set = SubResource("TileSet_4ibau")

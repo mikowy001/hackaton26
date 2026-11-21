@@ -2,7 +2,7 @@
 extends Node2D
 
 @onready var grass_layer: TileMapLayer = $Ground
-
+@onready var tree_layer: TileMapLayer = $Ground/Trees
 
 @export var map_width: int = 100
 @export var map_height: int = 100
@@ -13,6 +13,7 @@ extends Node2D
 var DEBUG = true
 
 var noise := FastNoiseLite.new()
+#zero dopaminy: 0
 #normalnie 1.5
 #duzo to 10
 
@@ -41,13 +42,18 @@ func generate_map():
 	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX
 
 	grass_layer.clear()
+	tree_layer.clear()
 
 	for x in range(map_width):
 		for y in range(map_height):
 			
-			var random_for_tree = randi_range(0, 15)
-			if (random_for_tree == 0):
-				grass_layer.set_cell(Vector2i(x, y), 1, Vector2i(randi_range(0, 2), 2))
+			var random_for_tree = randi_range(0, 5)
+			if (random_for_tree == 0 ):
+				tree_layer.set_cell(
+					Vector2i(x, y), 
+					0, 
+					Vector2i(randi_range(0, 2), 2)
+				)
 				
 		
 			var noise_value = noise.get_noise_2d(x, y) * noise_scale

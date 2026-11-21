@@ -6,12 +6,10 @@ extends Area2D
 var cirColor = Color(0.0, 0.565, 0.694, 0.5);
 var intensity = 1.0;
 
+var radius = 10000;
 var reallness = 0.1;
 
 var isThisPlayerInside = false;
-
-func reroll():
-	intensity = 1.0;
 
 func _on_body_entered(body: Node2D):
 	if(body.name == "Player"):
@@ -32,6 +30,11 @@ func _process(delta: float) -> void:
 		queue_redraw();
 		if(Input.is_action_just_pressed("spacja", true) && dopamineBar != null):
 			dopamineBar.add_dopamine(3);
+	
+	if(intensity <= 0):
+		intensity = 1.0;
+		position.x = position.x + (((randf() - 0.5) * 2) * radius);
+		position.y = position.y + (((randf() - 0.5) * 2) * radius);
 
 func _draw() -> void:
 	# Color(cirColor, cirColor.a * intensity) jest kurka rurka wow, co to jest godot :0

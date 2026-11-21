@@ -31,5 +31,10 @@ func _physics_process(_delta):
 		animated_sprite.play(last_direction)
 	else:
 		animated_sprite.stop()
+		
+		
 
 	move_and_slide()
+
+func get_player_pos():
+	return position;

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbfhroh0jaeyv"
-path="res://.godot/imported/crocodilo.jpg-3a8bb500184a91879c0a352180431741.ctex"
+uid="uid://wifq1kij8o6m"
+path="res://.godot/imported/egypt.png-bbc538c4e26763b568da7a7b5dabbf12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/popups/crocodilo.jpg"
-dest_files=["res://.godot/imported/crocodilo.jpg-3a8bb500184a91879c0a352180431741.ctex"]
+source_file="res://assets/popups/egypt.png"
+dest_files=["res://.godot/imported/egypt.png-bbc538c4e26763b568da7a7b5dabbf12.ctex"]
 
 [params]
 

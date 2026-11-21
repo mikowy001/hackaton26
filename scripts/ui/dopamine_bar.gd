@@ -13,6 +13,7 @@ func get_dopamine():
 
 func set_dopamine(value: float):
 	if(value > theBar.get_max()): theBar.set_value(theBar.get_max()); return;
+	elif(value < theBar.get_min()): theBar.set_value(theBar.get_min()); return;
 	theBar.set_value(value);
 	dopamine = value;
 	

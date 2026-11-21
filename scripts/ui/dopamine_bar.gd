@@ -2,9 +2,17 @@ extends Node
 
 @onready var theBar = $TextureProgressBar
 
-var dopamine = 100.0;
+
+var czasmiędzywyznawcaktulu= 0;
+var czasmiędzyzadrzewem= 0;
+@export var dopamine = 100.0;
+var zadrzewem = load("res://scenes/Ennemies/ZaDrzewem.tscn");
+var kultystaktulu = load("res://scenes/Ennemies/KultystaKtulu.tscn");
+
 var paused = false;
 var drain_rate = 2;
+
+
 
 func get_dopamine():
 	return dopamine;
@@ -12,6 +20,7 @@ func get_dopamine():
 func set_dopamine(value: float):
 	if(value > theBar.get_max()): theBar.set_value(theBar.get_max()); return;
 	elif(value < theBar.get_min()): theBar.set_value(theBar.get_min()); return;
+	print_debug("Dop: ", value);
 	theBar.set_value(value);
 	dopamine = value;
 
@@ -41,4 +50,29 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if(!paused): drain_dopamine(drain_rate * delta);
-	# TODO: Wysyłanie do death screena jak będzie
+	
+	if czasmiędzyzadrzewem > 3:
+		if dopamine >60:
+			pass
+		else:
+			var zd = zadrzewem.instantiate();
+			get_tree().current_scene.add_child(zd);
+			czasmiędzyzadrzewem = 0;
+	else:
+		czasmiędzyzadrzewem += delta;
+	
+	if czasmiędzywyznawcaktulu > 10:
+		if dopamine >50:
+			pass
+		else:
+			var kk = kultystaktulu.instantiate();
+			get_tree().current_scene.add_child(kk);
+			czasmiędzywyznawcaktulu = 0;
+	else:
+		czasmiędzywyznawcaktulu += delta;
+	
+	if dopamine <= 0.1:
+		
+		#oooooo tuuuuuuuuuuuu
+		
+		get_tree().change_scene_to_file("res://scenes/Ded.tscn");

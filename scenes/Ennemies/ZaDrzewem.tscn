@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cee55dgvyfkkn"]
+
+[ext_resource type="Script" uid="uid://cicxsclr5bvxu" path="res://scripts/Ennemies/za_drzewem.gd" id="1_c02vq"]
+[ext_resource type="Texture2D" uid="uid://c8ppae7u7pwnw" path="res://icon.svg" id="1_wguvm"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1111638690]
+texture = ExtResource("1_wguvm")
+script = ExtResource("1_c02vq")

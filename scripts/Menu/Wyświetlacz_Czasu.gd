@@ -10,7 +10,7 @@ func load() -> String:
 	return data;
 
 func _on_label_2_ready() -> void:
-	if  FileAccess.open(filePath, FileAccess.READ) == null:
+	if  FileAccess.open(filePath, FileAccess.READ) != null:
 		get_parent().text = "Czas: 0:00";
 	else:
 		var temp = load(filePath);

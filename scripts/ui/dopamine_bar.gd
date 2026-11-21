@@ -2,8 +2,6 @@ extends Node
 
 @onready var theBar = $TextureProgressBar
 
-
-
 var dopamine = 100.0;
 var paused = false;
 var drain_rate = 5.0;
@@ -16,7 +14,6 @@ func set_dopamine(value: float):
 	elif(value < theBar.get_min()): theBar.set_value(theBar.get_min()); return;
 	theBar.set_value(value);
 	dopamine = value;
-	
 
 func get_drain_rate():
 	return drain_rate;

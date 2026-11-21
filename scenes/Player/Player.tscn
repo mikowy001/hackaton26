@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cvu1dv7a8rqdq" path="res://scripts/player/player.gd" id="1_ved6o"]
 [ext_resource type="Script" uid="uid://damtci6x00tvv" path="res://scenes/Player/sciemnianie.gd" id="2_dark"]
 [ext_resource type="PackedScene" uid="uid://ovts6dnrx0w5" path="res://scenes/ui/dopamine_bar.tscn" id="3_ved6o"]
+[ext_resource type="Texture2D" uid="uid://rm8gs2x2vxm" path="res://assets/aPHONEd.png" id="4_fxc31"]
 [ext_resource type="PackedScene" uid="uid://bu1amv7lvxoiy" path="res://scenes/ui/compass.tscn" id="4_xcisb"]
 [ext_resource type="Texture2D" uid="uid://3ec1yvy4ynk4" path="res://assets/ryba.png" id="6_socpp"]
 
@@ -194,21 +195,30 @@ shape = SubResource("CapsuleShape2D_ky53y")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=73176397]
 
-[node name="DopamineBar" parent="Camera2D" unique_id=1759574927 instance=ExtResource("3_ved6o")]
-z_index = 2
-offset_left = 153.0
-offset_top = 85.0
-offset_right = 153.0
-offset_bottom = 85.0
-scale = Vector2(0.5, 0.5)
+[node name="TextureRect" type="TextureRect" parent="Camera2D" unique_id=1902717739]
+offset_left = 94.0
+offset_top = 14.0
+offset_right = 206.0
+offset_bottom = 126.0
+texture = ExtResource("4_fxc31")
 
-[node name="Compass" parent="Camera2D" unique_id=40836165 instance=ExtResource("4_xcisb")]
+[node name="Compass" parent="Camera2D/TextureRect" unique_id=40836165 instance=ExtResource("4_xcisb")]
 z_index = 2
-offset_left = 111.00001
-offset_top = -84.0
-offset_right = 111.00001
-offset_bottom = -84.0
-scale = Vector2(0.3, 0.3)
+layout_mode = 1
+offset_left = 37.0
+offset_top = 19.0
+offset_right = 37.0
+offset_bottom = 19.0
+scale = Vector2(0.23, 0.23)
+
+[node name="DopamineBar" parent="Camera2D/TextureRect" unique_id=1759574927 instance=ExtResource("3_ved6o")]
+z_index = 2
+layout_mode = 1
+offset_left = 30.0
+offset_top = 64.0
+offset_right = 30.0
+offset_bottom = 64.0
+scale = Vector2(0.5, 0.5)
 
 [node name="ryba" type="TextureRect" parent="." unique_id=19497773]
 offset_left = -28.0

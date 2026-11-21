@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c3wplqre1lad8"]
+
+[ext_resource type="Texture2D" uid="uid://mh7dj2rjm1h7" path="res://menuHandWithPhone.png" id="1_m625n"]
+[ext_resource type="Theme" uid="uid://bnan0rflvcshl" path="res://Menu.tres" id="2_wugcc"]
+
+[node name="Control" type="Control" unique_id=438204355]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1823173521]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1377774244]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -204.0
+offset_right = 320.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+texture = ExtResource("1_m625n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=455815578]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -56.0
+offset_right = 46.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=449917128]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_wugcc")
+text = "GRAJ"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=931791876]
+layout_mode = 2
+theme = ExtResource("2_wugcc")
+text = "WYJDŹ"

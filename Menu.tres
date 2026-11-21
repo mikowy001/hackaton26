@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://bnan0rflvcshl"]
+
+[ext_resource type="FontFile" uid="uid://bkddshtt4fpp5" path="res://Huberto's Assets/pixel_chip_xl_v1.0.0.ttf" id="1_ymob4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2f3xy"]
+bg_color = Color(0.9995683, 0.24069923, 0.66812783, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fbe2"]
+bg_color = Color(0.43529412, 0.654902, 0.5686275, 0.5882353)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sctcm"]
+
+[resource]
+Button/colors/font_color = Color(0, 0.49019608, 0.8745098, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_ymob4")
+Button/styles/disabled = SubResource("StyleBoxFlat_2f3xy")
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxFlat_2fbe2")
+Button/styles/normal = SubResource("StyleBoxTexture_sctcm")

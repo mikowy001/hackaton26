@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://rm8gs2x2vxm" path="res://assets/aPHONEd.png" id="4_fxc31"]
 [ext_resource type="PackedScene" uid="uid://bu1amv7lvxoiy" path="res://scenes/ui/compass.tscn" id="4_xcisb"]
 [ext_resource type="Texture2D" uid="uid://3ec1yvy4ynk4" path="res://assets/ryba.png" id="6_socpp"]
+[ext_resource type="Shader" uid="uid://7ujk612gd6es" path="res://scenes/Player/dopamine.gdshader" id="7_mono"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h00vy"]
 atlas = ExtResource("1_h00vy")
@@ -178,6 +179,11 @@ animations = [{
 radius = 5.0
 height = 16.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mono"]
+shader = ExtResource("7_mono")
+shader_parameter/brightness = 1.0
+shader_parameter/mono = 0.0
+
 [node name="Player" type="CharacterBody2D" unique_id=2074806864]
 script = ExtResource("1_ved6o")
 
@@ -196,6 +202,7 @@ shape = SubResource("CapsuleShape2D_ky53y")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=73176397]
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D" unique_id=1902717739]
+z_index = 2
 offset_left = 94.0
 offset_top = 14.0
 offset_right = 206.0
@@ -226,3 +233,13 @@ offset_top = -8.0
 offset_right = -10.0
 offset_bottom = 8.0
 texture = ExtResource("6_socpp")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="." unique_id=918273645]
+
+[node name="MonoOverlay" type="ColorRect" parent="." unique_id=918273646]
+material = SubResource("ShaderMaterial_mono")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

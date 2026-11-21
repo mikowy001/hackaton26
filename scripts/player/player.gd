@@ -17,7 +17,7 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var ryba = $ryba
 @onready var hotspot = get_node_or_null(hotspot_path)
-@onready var dopamine_bar = $Camera2D/DopamineBar
+@onready var dopamine_bar = get_node_or_null("Camera2D/TextureRect/DopamineBar")
 
 var last_direction = "walkDown"
 var orbit_angle: float = -3 * PI  # start on the left, where the fish was placed

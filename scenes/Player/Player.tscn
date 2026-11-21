@@ -269,8 +269,8 @@ scale = Vector2(0.23, 0.23)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Camera2D" unique_id=1631297898]
 z_index = 2
-position = Vector2(144, -6)
-scale = Vector2(0.06018517, 0.013963965)
+position = Vector2(145, -40)
+scale = Vector2(0.05856485, 0.040427923)
 sprite_frames = SubResource("SpriteFrames_xgwux")
 speed_scale = 4.0
 script = SubResource("GDScript_8djf2")

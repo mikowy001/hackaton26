@@ -75,8 +75,6 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play(last_direction)
 	else:
 		animated_sprite.stop()
-		
-		
 
 	move_and_slide()
 	boost_velocity *= exp(-boost_decay * delta)

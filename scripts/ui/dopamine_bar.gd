@@ -55,6 +55,4 @@ func _process(delta: float) -> void:
 		czasmiędzyzadrzewem = 0;
 	else:
 		czasmiędzyzadrzewem += delta;
-	
-	
-	# TODO: Wysyłanie do death screena jak będzie
+		# TODO: Wysyłanie do death screena jak będzie

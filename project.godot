@@ -21,8 +21,8 @@ Globals="*uid://d1bkdvpan3q7"
 
 [display]
 
-window/size/viewport_width=450
-window/size/viewport_height=300
+window/size/viewport_width=750
+window/size/viewport_height=500
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"

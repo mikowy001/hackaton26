@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://cy1gqv6pnq27s"]
 
 [ext_resource type="Theme" uid="uid://bnan0rflvcshl" path="res://Huberto's Assets/Menu.tres" id="1_257up"]
+[ext_resource type="Texture2D" uid="uid://bboa35gcmkjec" path="res://assets/space_11.png" id="1_ytedg"]
 [ext_resource type="Texture2D" uid="uid://cfinwu4taopks" path="res://Huberto's Assets/earth.png" id="2_gtid3"]
 [ext_resource type="Texture2D" uid="uid://c5nyk2uifly7w" path="res://Huberto's Assets/menuHandWithPhone.png" id="3_257up"]
 [ext_resource type="Script" uid="uid://bjyifs4ffkjki" path="res://scripts/Menu/Play.gd" id="4_257up"]
 [ext_resource type="Script" uid="uid://by84mfs2s0023" path="res://scripts/Menu/Quit.gd" id="4_dnfjo"]
+[ext_resource type="Script" uid="uid://b86f2jsm5eb57" path="res://scenes/Wyświetlacz_Czasu.gd" id="7_d3eho"]
 
 [sub_resource type="Animation" id="Animation_yv6n1"]
-length = 0.001
+length = 10.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -15,10 +18,10 @@ tracks/0/path = NodePath("TextureRect2:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, 6.283185307179586]
 }
 
 [sub_resource type="Animation" id="Animation_rh5f6"]
@@ -52,6 +55,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1485851349]
+offset_right = 750.0
+offset_bottom = 500.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("1_ytedg")
+stretch_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=1713974983]
 anchors_preset = 5
@@ -132,18 +143,24 @@ script = ExtResource("4_dnfjo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=51385520]
 libraries/ = SubResource("AnimationLibrary_r2ip2")
-autoplay = &"ZIEMIA"
+autoplay = &"RESET"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1853070166]
 anchor_mode = 0
 zoom = Vector2(0.5, 0.5)
 
 [node name="Label2" type="Label" parent="." unique_id=1921516014]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 132.0
+offset_bottom = 32.0
 theme = ExtResource("1_257up")
 theme_override_font_sizes/font_size = 32
 text = "Czas: 00:00"
+script = ExtResource("7_d3eho")
+
+[node name="Control" type="Control" parent="." unique_id=1093842084]
+layout_mode = 3
+anchors_preset = 0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/Button" to="TextureRect/VBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Button3" to="TextureRect/VBoxContainer/Button3" method="_on_pressed"]

@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://cy1gqv6pnq27s"]
+
+[ext_resource type="Theme" uid="uid://bnan0rflvcshl" path="res://Huberto's Assets/Menu.tres" id="1_257up"]
+[ext_resource type="Texture2D" uid="uid://cfinwu4taopks" path="res://Huberto's Assets/earth.png" id="2_gtid3"]
+[ext_resource type="Texture2D" uid="uid://c5nyk2uifly7w" path="res://Huberto's Assets/menuHandWithPhone.png" id="3_257up"]
+[ext_resource type="Script" uid="uid://bjyifs4ffkjki" path="res://Play.gd" id="4_257up"]
+[ext_resource type="Script" uid="uid://by84mfs2s0023" path="res://Quit.gd" id="4_dnfjo"]
+
+[sub_resource type="Animation" id="Animation_yv6n1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rh5f6"]
+resource_name = "ZIEMIA"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r2ip2"]
+_data = {
+&"RESET": SubResource("Animation_yv6n1"),
+&"ZIEMIA": SubResource("Animation_rh5f6")
+}
+
+[node name="Node2D" type="Node2D" unique_id=782437741]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=850864431]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1713974983]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 211.0
+offset_top = 33.0
+offset_right = 539.0
+offset_bottom = 97.0
+grow_horizontal = 2
+offset_transform_enabled = true
+theme = ExtResource("1_257up")
+theme_override_font_sizes/font_size = 64
+text = "SIGNAL ROT"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=719467852]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.817
+anchor_right = 0.5
+anchor_bottom = 1.817
+offset_left = 289.0
+offset_top = 736.5
+offset_right = 461.0
+offset_bottom = 908.5
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(7, 7)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_gtid3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=498729524]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 83.24997
+offset_top = 46.499985
+offset_right = 695.25
+offset_bottom = 658.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.477, 0.333)
+offset_transform_enabled = true
+texture = ExtResource("3_257up")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=327495509]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -158.0
+offset_right = 32.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="TextureRect/VBoxContainer" unique_id=2084481504]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_257up")
+text = "PLAY
+"
+script = ExtResource("4_257up")
+
+[node name="Button3" type="Button" parent="TextureRect/VBoxContainer" unique_id=1302042492]
+layout_mode = 2
+theme = ExtResource("1_257up")
+text = "QUIT"
+script = ExtResource("4_dnfjo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=51385520]
+libraries/ = SubResource("AnimationLibrary_r2ip2")
+autoplay = &"ZIEMIA"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1853070166]
+anchor_mode = 0
+zoom = Vector2(0.5, 0.5)
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/Button" to="TextureRect/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Button3" to="TextureRect/VBoxContainer/Button3" method="_on_pressed"]

@@ -103,3 +103,6 @@ tile_set = SubResource("TileSet_o21qa")
 
 [node name="Trees" type="TileMapLayer" parent="Ground" unique_id=1317921305]
 tile_set = SubResource("TileSet_4ibau")
+
+[node name="Player" parent="." unique_id=2074806864 instance=ExtResource("3_tlwt5")]
+position = Vector2(248, 202)

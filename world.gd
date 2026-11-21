@@ -54,7 +54,15 @@ func generate_map():
 					0, 
 					Vector2i(randi_range(0, 2), 2)
 				)
-				
+			elif (random_for_tree == 1):
+				var arrayX = [8, 10, 12, 14, 0, 2, 4, 6, 0, 4, 8, 12]
+				var arrayY = [0, 0, 0, 0, 2, 2, 2, 2, 4, 4, 4, 4]
+				var ranarr = randi_range(0, 11)
+				tree_layer.set_cell(
+					Vector2i(x, y),
+					1,
+					Vector2i(arrayX[ranarr], arrayY[ranarr])
+				)
 		
 			var noise_value = noise.get_noise_2d(x, y) * noise_scale
 		

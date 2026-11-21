@@ -1,7 +1,7 @@
 
 extends CharacterBody2D
 
-@export var speed: float = 300.0
+@export var speed: float = 10000.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -15,7 +15,7 @@ func _physics_process(delta):
         "move_down"
 	)
 
-	velocity = direction * speed
+	velocity = direction * speed * delta
 
 	if direction != Vector2.ZERO:
 		if abs(direction.x) > abs(direction.y):

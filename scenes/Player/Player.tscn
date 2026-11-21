@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://r4t4ru48f34s" path="res://assets/debilka.png" id="1_h00vy"]
 [ext_resource type="Script" uid="uid://cvu1dv7a8rqdq" path="res://scripts/player/player.gd" id="1_ved6o"]
-[ext_resource type="Shader" uid="uid://7ujk612gd6es" path="res://scenes/Player/dopamine.gdshader" id="3_bvqhm"]
+[ext_resource type="Script" uid="uid://damtci6x00tvv" path="res://scenes/Player/sciemnianie.gd" id="2_dark"]
 [ext_resource type="PackedScene" uid="uid://ovts6dnrx0w5" path="res://scenes/ui/dopamine_bar.tscn" id="3_ved6o"]
 [ext_resource type="PackedScene" uid="uid://bu1amv7lvxoiy" path="res://scenes/ui/compass.tscn" id="4_xcisb"]
 
@@ -176,13 +176,11 @@ animations = [{
 radius = 5.0
 height = 16.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ky53y"]
-shader = ExtResource("3_bvqhm")
-shader_parameter/nightness = 0.0
-shader_parameter/night_tint = Color(0.08, 0.12, 0.28, 1)
-
 [node name="Player" type="CharacterBody2D" unique_id=2074806864]
-script = ExtResource("1_ky53y")
+script = ExtResource("1_ved6o")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1403899919]
+script = ExtResource("2_dark")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1444178757]
 sprite_frames = SubResource("SpriteFrames_4galn")
@@ -208,13 +206,3 @@ offset_top = -84.0
 offset_right = 111.00001
 offset_bottom = -84.0
 scale = Vector2(0.3, 0.3)
-
-[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=575651364]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasGroup" unique_id=327469355]
-material = SubResource("ShaderMaterial_ky53y")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2

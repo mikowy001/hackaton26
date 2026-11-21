@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-@export var speed: float = 10000.0
+@export var speed: float = 166.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 
 var last_direction = "walkDown"
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Input.get_vector(
 		"move_left",
 		"move_right",
@@ -14,7 +14,7 @@ func _physics_process(delta):
 		"move_down"
 	)
 	
-	velocity = direction * speed * delta
+	velocity = direction * speed
 	
 	if direction != Vector2.ZERO:
 		if abs(direction.x) > abs(direction.y):
@@ -27,8 +27,6 @@ func _physics_process(delta):
 				last_direction = "walkDown"
 			else:
 				last_direction = "walkUp"
-		
-		print_debug("New player pos is ", position.x, " ", position.y);
 		
 		animated_sprite.play(last_direction)
 	else:

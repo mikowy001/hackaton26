@@ -52,7 +52,7 @@ func generate_map():
 				)
 			elif (random_for_tree == 1):
 				var arrayX = [8, 10, 12, 14, 0, 2, 4, 6, 0, 4, 8, 12]
-				var arrayY = [0, 0, 0, 0, 2, 2, 2, 2, 4, 4, 4, 4]
+				var arrayY = [0, 0, 0, 0, 2, 2, 2, 2, 5, 5, 5, 5]
 				var ranarr = randi_range(0, 11)
 				tree_layer.set_cell(
 					Vector2i(x, y),

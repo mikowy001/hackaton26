@@ -4,11 +4,34 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6tdp3"]
 
+[sub_resource type="Gradient" id="Gradient_yirtk"]
+colors = PackedColorArray(0.16470589, 0.6156863, 0.9098039, 0.5882353, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yirtk"]
+gradient = SubResource("Gradient_yirtk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yirtk"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 20.0
+inherit_velocity_ratio = 15.0
+direction = Vector3(0, -1, 0)
+spread = 100.0
+gravity = Vector3(0, -80, 0)
+color_ramp = SubResource("GradientTexture1D_yirtk")
+
 [node name="Hotspot" type="Area2D" unique_id=613247634]
 script = ExtResource("1_yirtk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=390565990]
 shape = SubResource("CircleShape2D_6tdp3")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1646315856]
+scale = Vector2(0.5, 0.5)
+amount = 10
+lifetime = 0.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_yirtk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

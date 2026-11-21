@@ -6,7 +6,6 @@ extends Area2D
 var cirColor = Color(0.0, 0.565, 0.694, 0.5);
 var intensity = 1.0;
 
-var radius = 10000;
 var reallness = 0.1;
 
 var isThisPlayerInside = false;
@@ -22,7 +21,9 @@ func _on_body_exited(body: Node2D):
 		print_debug("Player exited this very very interesting spot :(");
 
 func _ready() -> void:
-	pass
+	position.x = (Globals.map_width * Globals.tile_size) * randf();
+	position.y = (Globals.map_height * Globals.tile_size) * randf();
+	print_debug("Starting hot pos is ", position.x, " ", position.y);
 
 func _process(delta: float) -> void:
 	if(isThisPlayerInside):
@@ -33,8 +34,9 @@ func _process(delta: float) -> void:
 	
 	if(intensity <= 0):
 		intensity = 1.0;
-		position.x = position.x + (((randf() - 0.5) * 2) * radius);
-		position.y = position.y + (((randf() - 0.5) * 2) * radius);
+		position.x = (Globals.map_width * Globals.tile_size) * randf();
+		position.y = (Globals.map_height * Globals.tile_size) * randf();
+		print_debug("New hot pos is ", position.x, " ", position.y);
 
 func _draw() -> void:
 	# Color(cirColor, cirColor.a * intensity) jest kurka rurka wow, co to jest godot :0

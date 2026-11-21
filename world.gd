@@ -1,11 +1,7 @@
-
 extends Node2D
 
 @onready var grass_layer: TileMapLayer = $Ground
 @onready var tree_layer: TileMapLayer = $Ground/Trees
-
-@export var map_width: int = 100
-@export var map_height: int = 100
 
 @export var noise_scale: float = 1.25
 @export var seed_value: int = 2137
@@ -44,8 +40,8 @@ func generate_map():
 	grass_layer.clear()
 	tree_layer.clear()
 
-	for x in range(map_width):
-		for y in range(map_height):
+	for x in range(Globals.map_width):
+		for y in range(Globals.map_height):
 			
 			var random_for_tree = randi_range(0, 5)
 			if (random_for_tree == 0 ):

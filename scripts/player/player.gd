@@ -10,6 +10,7 @@ extends CharacterBody2D
 @export var boost_decay: float = 6.0  # higher = shorter hop
 @export var boost_cooldown: float = 0.25
 @export var min_dash_dopamine: float = 25.0  # 1/4 of the 100-point bar
+@export var dash_dopamine_cost: float = 2.0
 
 @export var hotspot_path: NodePath = ^"../Hotspot"
 
@@ -54,6 +55,7 @@ func _physics_process(delta: float) -> void:
 			# uses the raw orbit angle: that is the radial "away from player" direction.
 			boost_velocity = Vector2.RIGHT.rotated(orbit_angle) * boost_speed
 			boost_cooldown_left = boost_cooldown
+			dopamine_bar.drain_dopamine(dash_dopamine_cost)
 
 	velocity += boost_velocity
 

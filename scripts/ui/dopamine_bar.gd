@@ -4,7 +4,7 @@ extends Node
 
 var dopamine = 100.0;
 var paused = false;
-var drain_rate = 5.0;
+var drain_rate = 4.2;
 
 func get_dopamine():
 	return dopamine;

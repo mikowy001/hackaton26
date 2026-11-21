@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bu1amv7lvxoiy"]
+
+[ext_resource type="Texture2D" uid="uid://c8ppae7u7pwnw" path="res://icon.svg" id="1_oectf"]
+[ext_resource type="Script" uid="uid://wsofc6t0chav" path="res://scripts/ui/compass.gd" id="1_qgpxl"]
+[ext_resource type="Texture2D" uid="uid://cfinwu4taopks" path="res://Huberto's Assets/earth.png" id="2_bg58f"]
+
+[node name="Compass" type="Control" unique_id=40836165]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qgpxl")
+
+[node name="ZIME" type="TextureRect" parent="." unique_id=1637376221]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.171
+anchor_bottom = 0.256
+offset_right = -0.25
+texture = ExtResource("2_bg58f")
+
+[node name="Elita" type="TextureRect" parent="ZIME" unique_id=1460719018]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 63.0
+offset_right = 256.0
+offset_bottom = 109.0
+texture = ExtResource("1_oectf")
+expand_mode = 1

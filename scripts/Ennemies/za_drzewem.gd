@@ -12,8 +12,8 @@ func _ready() -> void:
 	position = plpos.position + Vector2(500, 0).rotated(kat);
 	
 	if dopamine.get_dopamine() > 50:
-		texture.resource_path = "res://Huberto's Assets/"; #place holder za triple t
+		texture.resource_path = "res://Huberto's Assets/deep_elf_high_priest.png"; #place holder za triple t
 	else:
-		texture.resource_path = "res://Huberto's Assets/guzik.png"; #place holder za kultyste
+		texture.resource_path = "res://Huberto's Assets/deep_elf_high_priest.png"; #place holder za kultyste
 	await get_tree().create_timer(10.0).timeout;
 	queue_free();

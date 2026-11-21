@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d1iwxr61nlcl5"]
 
+[ext_resource type="Script" uid="uid://cxlg6barbw3sd" path="res://intro.gd" id="1_ayt76"]
 [ext_resource type="Theme" uid="uid://bnan0rflvcshl" path="res://Huberto's Assets/Menu.tres" id="1_s2ta7"]
 
 [node name="intro" type="Node2D" unique_id=372292974]
+script = ExtResource("1_ayt76")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1199919650]
 offset_right = 40.0
@@ -10,28 +12,28 @@ offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="1" type="Label" parent="." unique_id=233870194]
-offset_left = 260.0
-offset_top = 140.0
-offset_right = 405.0
-offset_bottom = 163.0
+offset_left = 108.0
+offset_top = 75.0
+offset_right = 253.0
+offset_bottom = 98.0
 theme = ExtResource("1_s2ta7")
 theme_override_font_sizes/font_size = 20
 text = "INTERNET is dead."
 
 [node name="2" type="Label" parent="." unique_id=1322815197]
-offset_left = 260.0
-offset_top = 166.0
-offset_right = 405.0
-offset_bottom = 189.0
+offset_left = 108.0
+offset_top = 101.0
+offset_right = 253.0
+offset_bottom = 124.0
 theme = ExtResource("1_s2ta7")
 theme_override_font_sizes/font_size = 20
 text = "DOPAMINE is fuel."
 
 [node name="3" type="Label" parent="." unique_id=215463566]
-offset_left = 260.0
-offset_top = 198.0
-offset_right = 405.0
-offset_bottom = 221.0
+offset_left = 108.0
+offset_top = 133.0
+offset_right = 298.0
+offset_bottom = 156.0
 theme = ExtResource("1_s2ta7")
 theme_override_font_sizes/font_size = 20
 text = "woods have TUNG TUNG."

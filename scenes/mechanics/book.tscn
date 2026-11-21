@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://caekt52axasod"]
+
+[node name="Book" type="Area2D" unique_id=1641188498]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=971639415]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1212428836]

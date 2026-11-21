@@ -45,7 +45,7 @@ func _process(delta: float) -> void:
 		intensity -= delta * reallness;
 		queue_redraw();
 		if(Input.is_action_just_pressed("spacja") && dopamineBar != null):
-			dopamineBar.add_dopamine(1);
+			dopamineBar.add_dopamine(1.5);
 			var popup = popups_scene.instantiate();
 			popup_layer.add_child(popup);
 			popups.append(popup);

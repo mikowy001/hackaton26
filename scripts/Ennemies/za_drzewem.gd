@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@onready var dopamine = get_node_or_null("../Player/Camera2D/DopamineBar");
+@onready var dopamine = get_node_or_null("../Player/Camera2D/TextureRect/DopamineBar");
 @onready var plpos = get_node_or_null("../Player");
 
 @export var scene_to_instantiate: PackedScene;
